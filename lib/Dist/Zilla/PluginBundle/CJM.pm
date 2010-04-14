@@ -56,6 +56,7 @@ This is the plugin bundle that CJM uses. It is equivalent to:
   tag_message = Tagged %N %v
   push_to     = github
 
+  [TestRelease]
   [UploadToCPAN]
   [ArchiveRelease]
   directory = cjm_releases
