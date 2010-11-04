@@ -17,7 +17,7 @@ package Dist::Zilla::PluginBundle::CJM;
 # ABSTRACT: Build a distribution like CJM
 #---------------------------------------------------------------------
 
-our $VERSION = '0.08';
+our $VERSION = '0.09';
 # This file is part of {{$dist}} {{$dist_version}} ({{$date}})
 
 use Moose;
@@ -33,6 +33,7 @@ This is the plugin bundle that CJM uses. It is equivalent to:
   [GatherDir]
   [PruneCruft]
   [ManifestSkip]
+  [MetaJSON]
   [MetaYAML]
   [License]
   [PodSyntaxTests]
@@ -82,6 +83,7 @@ sub configure
       GatherDir
       PruneCruft
       ManifestSkip
+      MetaJSON
       MetaYAML
       License
       PodSyntaxTests
