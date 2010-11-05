@@ -1,6 +1,6 @@
 Revision history for Dist-Zilla-PluginBundle-CJM
 
-0.09   NOT
+0.09   November 5, 2010
 	- Add MetaJSON (while keeping MetaYAML for v1.4 support)
 	- Add github_http = 0 for Repository (Meta 2 has url & web)
 
