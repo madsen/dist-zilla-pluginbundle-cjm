@@ -49,7 +49,6 @@ This is the plugin bundle that CJM uses. It is equivalent to:
 
   [Repository]
   git_remote  = github
-  github_http = 0
 
   [@Git]
   allow_dirty = Changes
@@ -107,7 +106,7 @@ sub configure
       GitVersionCheckCJM
       TemplateCJM
     ),
-    [ Repository => { git_remote => 'github', github_http => 0 } ],
+    [ Repository => { git_remote => 'github' } ],
   );
 
   $self->add_bundle(Git => {
