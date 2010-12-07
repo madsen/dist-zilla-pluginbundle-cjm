@@ -1,5 +1,10 @@
 Revision history for Dist-Zilla-PluginBundle-CJM
 
+4.00   NOT
+	- Require PodLoom version 3.01 (prefer web URL for repository).
+	- Require MatchManifest version 4.00 (works on Windows).
+	- Change major version to 4, because Dist::Zilla 4 is required.
+
 0.10   November 11, 2010
 	- Require GitVersionCheckCJM version 3.02 and Git::Wrapper.
 	  Don't require Git.pm anymore.
