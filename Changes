@@ -1,6 +1,6 @@
 Revision history for Dist-Zilla-PluginBundle-CJM
 
-4.00   NOT
+4.00   December 7, 2010
 	- Require PodLoom version 3.01 (prefer web URL for repository).
 	- Require MatchManifest version 4.00 (works on Windows).
 	- Require TemplateCJM version 3.03 (more selective processing).
