@@ -17,7 +17,7 @@ package Dist::Zilla::PluginBundle::CJM;
 # ABSTRACT: Build a distribution like CJM
 #---------------------------------------------------------------------
 
-our $VERSION = '4.01';
+our $VERSION = '4.02';
 # This file is part of {{$dist}} {{$dist_version}} ({{$date}})
 
 use Moose;
@@ -55,7 +55,7 @@ This is the plugin bundle that CJM uses. It is equivalent to:
   commit_msg  = Updated Changes for %{MMMM d, yyyy}d%{ trial}t release of %v
   tag_format  = %v%t
   tag_message = Tagged %N %v%{ (trial release)}t
-  push_to     = github
+  push_to     = github master
 
   [TestRelease]
   [UploadToCPAN]
@@ -114,7 +114,7 @@ sub configure
     commit_msg  => 'Updated Changes for %{MMMM d, yyyy}d%{ trial}t release of %v',
     tag_format  => '%v%t',
     tag_message => 'Tagged %N %v%{ (trial release)}t',
-    push_to     => 'github',
+    push_to     => 'github master',
   });
 
   $self->add_plugins(

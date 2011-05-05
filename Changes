@@ -1,5 +1,8 @@
 Revision history for Dist-Zilla-PluginBundle-CJM
 
+4.02   NOT
+	- Specify master branch in push_to, so it can push to a new repository
+
 4.01   December 20, 2010
 	- Use %t to indicate a trial release
 	- Require @Git version 1.103520 (supports %t in Tag & Commit)
