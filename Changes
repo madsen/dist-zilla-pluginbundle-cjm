@@ -1,6 +1,6 @@
 Revision history for Dist-Zilla-PluginBundle-CJM
 
-4.02   NOT
+4.02   May 5, 2011
 	- Specify master branch in push_to, so it can push to a new repository
 	- Require PodLoom version 4.00 (compatible with current dzil).
 	- Require TemplateCJM version 3.05 (latest version)
