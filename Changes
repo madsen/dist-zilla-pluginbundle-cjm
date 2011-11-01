@@ -4,6 +4,7 @@ Revision history for Dist-Zilla-PluginBundle-Author-CJM
 	- Rename bundle from @CJM to @Author::CJM.  This dist still
 	  contains a @CJM bundle, but it just issues a deprecation
 	  warning and loads @Author::CJM.  It will be removed soon.
+	- Add RecommendedPrereqs
 	- Pass check_files param to GitVersionCheckCJM
 	- Pass changelog_re param to TemplateCJM
 	- Require PodLoom version 4.01 (latest version)

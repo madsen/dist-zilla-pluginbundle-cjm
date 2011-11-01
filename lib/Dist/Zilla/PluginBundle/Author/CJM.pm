@@ -50,6 +50,7 @@ This is the plugin bundle that CJM uses. It is equivalent to:
   [MakeMaker]
   [MetaConfig]
   [MatchManifest]
+  [RecommendedPrereqs]
   [GitVersionCheckCJM]
   [TemplateCJM]
 
@@ -109,6 +110,7 @@ sub configure
     qw(
       MetaConfig
       MatchManifest
+      RecommendedPrereqs
     ),
     [ GitVersionCheckCJM => scalar $self->config_slice({
         check_files => 'finder'
