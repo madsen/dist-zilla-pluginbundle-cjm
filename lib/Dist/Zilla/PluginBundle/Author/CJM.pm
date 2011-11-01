@@ -109,9 +109,11 @@ sub configure
     qw(
       MetaConfig
       MatchManifest
-      GitVersionCheckCJM
-      TemplateCJM
     ),
+    [ GitVersionCheckCJM => scalar $self->config_slice({
+        check_files => 'finder'
+    }) ],
+    [ TemplateCJM => scalar $self->config_slice('changelog_re') ],
     [ Repository => { git_remote => 'github' } ],
   );
 
@@ -130,6 +132,8 @@ sub configure
   );
 } # end configure
 
+sub mvp_multivalue_args { qw(check_files) }
+
 no Moose;
 __PACKAGE__->meta->make_immutable;
 1;
@@ -138,3 +142,4 @@ __END__
 
 =for Pod::Coverage
 configure
+mvp_multivalue_args
