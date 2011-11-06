@@ -14,10 +14,10 @@ package Dist::Zilla::PluginBundle::CJM;
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See either the
 # GNU General Public License or the Artistic License for more details.
 #
-# ABSTRACT: Build a distribution like CJM
+# ABSTRACT: DEPRECATED plugin bundle for CJM
 #---------------------------------------------------------------------
 
-our $VERSION = '4.10';
+our $VERSION = '4.11';
 # This file is part of {{$dist}} {{$dist_version}} ({{$date}})
 
 use Moose;
