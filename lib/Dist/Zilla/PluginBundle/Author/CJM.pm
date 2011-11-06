@@ -17,7 +17,7 @@ package Dist::Zilla::PluginBundle::Author::CJM;
 # ABSTRACT: Build a distribution like CJM
 #---------------------------------------------------------------------
 
-our $VERSION = '4.10';
+our $VERSION = '4.11';
 # This file is part of {{$dist}} {{$dist_version}} ({{$date}})
 
 use Moose;
@@ -51,6 +51,7 @@ This is the plugin bundle that CJM uses. It is equivalent to:
   [MetaConfig]
   [MatchManifest]
   [RecommendedPrereqs]
+  [CheckPrereqsIndexed]
   [GitVersionCheckCJM]
   [TemplateCJM]
 
@@ -69,10 +70,37 @@ This is the plugin bundle that CJM uses. It is equivalent to:
   [ArchiveRelease]
   directory = cjm_releases
 
-If the C<manual_version> argument is given to the bundle,
-VersionFromModule is omitted.  If the C<builder> argument is given, it
-is used instead of MakeMaker.  If the C<pod_template> argument is
-given, it is passed to PodLoom as its C<template>.
+=attr builder
+
+Use the specified plugin instead of MakeMaker.
+
+=attr changelog_re
+
+Passed to TemplateCJM.
+
+=attr check_files
+
+Passed to GitVersionCheckCJM as its C<finder>.
+
+=attr eumm_version
+
+Passed to MakeMaker (or its replacement C<builder>).
+
+=attr mb_version
+
+Passed to MakeMaker (or its replacement C<builder>).
+
+=attr manual_version
+
+If true, VersionFromModule is omitted.
+
+=attr pod_template
+
+Passed to PodLoom as its C<template>.
+
+=attr skip_index_check
+
+Passed to CheckPrereqsIndexed as its C<skips>.
 
 =cut
 
@@ -112,6 +140,9 @@ sub configure
       MatchManifest
       RecommendedPrereqs
     ),
+    [ CheckPrereqsIndexed => scalar $self->config_slice({
+        skip_index_check => 'skips'
+    }) ],
     [ GitVersionCheckCJM => scalar $self->config_slice({
         check_files => 'finder'
     }) ],
@@ -134,7 +165,7 @@ sub configure
   );
 } # end configure
 
-sub mvp_multivalue_args { qw(check_files) }
+sub mvp_multivalue_args { qw(check_files skip_index_check) }
 
 no Moose;
 __PACKAGE__->meta->make_immutable;

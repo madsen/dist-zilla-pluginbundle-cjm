@@ -1,5 +1,9 @@
 Revision history for Dist-Zilla-PluginBundle-Author-CJM
 
+4.11   NOT
+	- Add CheckPrereqsIndexed
+	- Improve documentation
+
 4.10   November 1, 2011
 	- Rename bundle from @CJM to @Author::CJM.  This dist still
 	  contains a @CJM bundle, but it just issues a deprecation
