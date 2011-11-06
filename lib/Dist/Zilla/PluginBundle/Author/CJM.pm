@@ -82,6 +82,10 @@ Passed to TemplateCJM.
 
 Passed to GitVersionCheckCJM as its C<finder>.
 
+=attr check_recommend
+
+Passed to RecommendedPrereqs as its C<finder>.
+
 =attr eumm_version
 
 Passed to MakeMaker (or its replacement C<builder>).
@@ -138,8 +142,10 @@ sub configure
     qw(
       MetaConfig
       MatchManifest
-      RecommendedPrereqs
     ),
+    [ RecommendedPrereqs => scalar $self->config_slice({
+        check_recommend => 'finder'
+    }) ],
     [ CheckPrereqsIndexed => scalar $self->config_slice({
         skip_index_check => 'skips'
     }) ],
@@ -165,7 +171,7 @@ sub configure
   );
 } # end configure
 
-sub mvp_multivalue_args { qw(check_files skip_index_check) }
+sub mvp_multivalue_args { qw(check_files check_recommend skip_index_check) }
 
 no Moose;
 __PACKAGE__->meta->make_immutable;
