@@ -102,6 +102,12 @@ If true, VersionFromModule is omitted.
 
 Passed to PodLoom as its C<template>.
 
+=attr remove_plugin
+
+The named plugin is removed from the bundle (may be specified multiple
+times).  This exists because you can't pass multi-value parameters
+through L<@Filter|Dist::Zilla::PluginBundle::Filter>.
+
 =attr skip_index_check
 
 Passed to CheckPrereqsIndexed as its C<skips>.
@@ -169,9 +175,17 @@ sub configure
     'UploadToCPAN',
     [ ArchiveRelease => { directory => 'cjm_releases' } ],
   );
+
+  if (my $remove = $arg->{remove_plugin}) {
+    my $prefix  = $self->name . '/';
+    my %remove = map { $prefix . $_ => 1 } @$remove;
+    my $plugins = $self->plugins;
+    @$plugins = grep { not $remove{$_->[0]} } @$plugins;
+  }
 } # end configure
 
-sub mvp_multivalue_args { qw(check_files check_recommend skip_index_check) }
+sub mvp_multivalue_args { qw(check_files check_recommend remove_plugin
+                             skip_index_check) }
 
 no Moose;
 __PACKAGE__->meta->make_immutable;

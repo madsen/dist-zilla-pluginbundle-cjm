@@ -3,6 +3,7 @@ Revision history for Dist-Zilla-PluginBundle-Author-CJM
 4.11   NOT
 	- Add CheckPrereqsIndexed
 	- Pass check_recommend param to RecommendedPrereqs
+	- Add remove_plugin param (Can't pass multivalue params to @Filter)
 	- Improve documentation
 
 4.10   November 1, 2011
