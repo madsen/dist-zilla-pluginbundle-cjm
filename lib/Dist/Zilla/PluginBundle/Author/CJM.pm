@@ -17,7 +17,7 @@ package Dist::Zilla::PluginBundle::Author::CJM;
 # ABSTRACT: Build a distribution like CJM
 #---------------------------------------------------------------------
 
-our $VERSION = '4.11';
+our $VERSION = '4.12';
 # This file is part of {{$dist}} {{$dist_version}} ({{$date}})
 
 use Moose;
@@ -42,6 +42,7 @@ This is the plugin bundle that CJM uses. It is equivalent to:
   [MetaJSON]
   [MetaYAML]
   [License]
+  [Test::PrereqsFromMeta]
   [PodSyntaxTests]
   [PodCoverageTests]
   [ExtraTests]
@@ -131,6 +132,7 @@ sub configure
       MetaJSON
       MetaYAML
       License
+      Test::PrereqsFromMeta
       PodSyntaxTests
       PodCoverageTests
       ExtraTests
