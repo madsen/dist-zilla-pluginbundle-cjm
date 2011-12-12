@@ -2,6 +2,8 @@ Revision history for Dist-Zilla-PluginBundle-Author-CJM
 
 4.12   NOT
 	- Add Test::PrereqsFromMeta
+	- Pass pod_finder param to PodLoom and TemplateCJM (as finder)
+	- Pass template_file param to TemplateCJM (as file)
 
 4.11   November 11, 2011
 	- Add CheckPrereqsIndexed

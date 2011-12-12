@@ -99,6 +99,10 @@ Passed to MakeMaker (or its replacement C<builder>).
 
 If true, VersionFromModule is omitted.
 
+=attr pod_finder
+
+Passed to both PodLoom and TemplateCJM as their C<finder>.
+
 =attr pod_template
 
 Passed to PodLoom as its C<template>.
@@ -112,6 +116,10 @@ through L<@Filter|Dist::Zilla::PluginBundle::Filter>.
 =attr skip_index_check
 
 Passed to CheckPrereqsIndexed as its C<skips>.
+
+=attr template_file
+
+Passed to TemplateCJM as its C<file>.
 
 =cut
 
@@ -140,6 +148,7 @@ sub configure
     [PodLoom => {
       data => 'tools/loom.pl',
       $self->config_slice({
+        pod_finder   => 'finder',
         pod_template => 'template',
       })->flatten,
     } ],
@@ -160,7 +169,12 @@ sub configure
     [ GitVersionCheckCJM => scalar $self->config_slice({
         check_files => 'finder'
     }) ],
-    [ TemplateCJM => scalar $self->config_slice('changelog_re') ],
+    [ TemplateCJM => scalar $self->config_slice(
+        'changelog_re',
+        { pod_finder    => 'finder',
+          template_file => 'file',
+        },
+      ) ],
     [ Repository => { git_remote => 'github' } ],
   );
 
@@ -187,7 +201,7 @@ sub configure
 } # end configure
 
 sub mvp_multivalue_args { qw(check_files check_recommend remove_plugin
-                             skip_index_check) }
+                             pod_finder skip_index_check template_file) }
 
 no Moose;
 __PACKAGE__->meta->make_immutable;
