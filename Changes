@@ -4,6 +4,8 @@ Revision history for Dist-Zilla-PluginBundle-Author-CJM
 	- Add Test::PrereqsFromMeta
 	- Pass pod_finder param to PodLoom and TemplateCJM (as finder)
 	- Pass template_file param to TemplateCJM (as file)
+	- The @CJM bundle has been removed.  You should replace [@CJM]
+	  with [@Author::CJM / CJM] in your dist.ini
 
 4.11   November 11, 2011
 	- Add CheckPrereqsIndexed

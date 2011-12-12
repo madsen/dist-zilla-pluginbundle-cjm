@@ -6,7 +6,6 @@ META.yml
 Makefile.PL
 README
 lib/Dist/Zilla/PluginBundle/Author/CJM.pm
-lib/Dist/Zilla/PluginBundle/CJM.pm
 t/00-all_prereqs.t
 t/00-compile.t
 t/release-pod-coverage.t
