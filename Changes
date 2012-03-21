@@ -2,6 +2,7 @@ Revision history for Dist-Zilla-PluginBundle-Author-CJM
 
 4.13   NOT
 	- Pass mb_class param to builder plugin
+	- Require RecommendedPrereqs version 4.06 (latest version)
 
 4.12   December 12, 2011
 	- Add Test::PrereqsFromMeta
