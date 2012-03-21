@@ -1,5 +1,8 @@
 Revision history for Dist-Zilla-PluginBundle-Author-CJM
 
+4.13   NOT
+	- Pass mb_class param to builder plugin
+
 4.12   December 12, 2011
 	- Add Test::PrereqsFromMeta
 	- Pass pod_finder param to PodLoom and TemplateCJM (as finder)

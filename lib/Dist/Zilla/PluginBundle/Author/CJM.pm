@@ -17,7 +17,7 @@ package Dist::Zilla::PluginBundle::Author::CJM;
 # ABSTRACT: Build a distribution like CJM
 #---------------------------------------------------------------------
 
-our $VERSION = '4.12';
+our $VERSION = '4.13';
 # This file is part of {{$dist}} {{$dist_version}} ({{$date}})
 
 use Moose;
@@ -91,6 +91,10 @@ Passed to RecommendedPrereqs as its C<finder>.
 
 Passed to MakeMaker (or its replacement C<builder>).
 
+=attr mb_class
+
+Passed to MakeMaker (or its replacement C<builder>).
+
 =attr mb_version
 
 Passed to MakeMaker (or its replacement C<builder>).
@@ -154,7 +158,7 @@ sub configure
     } ],
     # either MakeMaker or ModuleBuild:
     [ ($arg->{builder} || 'MakeMaker') =>
-      scalar $self->config_slice(qw( eumm_version mb_version ))
+      scalar $self->config_slice(qw( eumm_version mb_version mb_class ))
     ],
     qw(
       MetaConfig
