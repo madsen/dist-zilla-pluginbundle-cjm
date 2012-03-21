@@ -1,6 +1,6 @@
 Revision history for Dist-Zilla-PluginBundle-Author-CJM
 
-4.13   NOT
+4.13   March 21, 2012
 	- Pass mb_class param to builder plugin
 	- Require RecommendedPrereqs version 4.06 (latest version)
 
