@@ -17,7 +17,7 @@ package Dist::Zilla::PluginBundle::Author::CJM;
 # ABSTRACT: Build a distribution like CJM
 #---------------------------------------------------------------------
 
-our $VERSION = '4.13';
+our $VERSION = '4.20';
 # This file is part of {{$dist}} {{$dist_version}} ({{$date}})
 
 use Moose;
@@ -121,6 +121,10 @@ through L<@Filter|Dist::Zilla::PluginBundle::Filter>.
 
 Passed to CheckPrereqsIndexed as its C<skips>.
 
+=attr template_date_format
+
+Passed to TemplateCJM as its C<date_format>.  Defaults to C<MMMM d, y>.
+
 =attr template_file
 
 Passed to TemplateCJM as its C<file>.
@@ -173,12 +177,15 @@ sub configure
     [ GitVersionCheckCJM => scalar $self->config_slice({
         check_files => 'finder'
     }) ],
-    [ TemplateCJM => scalar $self->config_slice(
-        'changelog_re',
-        { pod_finder    => 'finder',
-          template_file => 'file',
-        },
-      ) ],
+    [ TemplateCJM => {
+        date_format => 'MMMM d, y',
+        %{$self->config_slice(
+          'changelog_re',
+          { pod_finder           => 'finder',
+            template_date_format => 'date_format',
+            template_file        => 'file',
+          })},
+      } ],
     [ Repository => { git_remote => 'github' } ],
   );
 
