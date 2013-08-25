@@ -1,6 +1,6 @@
 Revision history for Dist-Zilla-PluginBundle-Author-CJM
 
-4.20   NOT
+4.20   2013-08-24
 	- Pass template_date_format param to TemplateCJM (as date_format)
 	  Default value is "MMMM d, y".	 This allows Changes to follow
 	  CPAN::Changes::Spec while still using English dates elsewhere.
