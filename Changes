@@ -7,24 +7,24 @@ Revision history for Dist-Zilla-PluginBundle-Author-CJM
 	- Require TemplateCJM version 4.20 (supports date_format)
 	- Require Test::PrereqsFromMeta 4.20 (latest version)
 
-4.13   March 21, 2012
+4.13   2012-03-21
 	- Pass mb_class param to builder plugin
 	- Require RecommendedPrereqs version 4.06 (latest version)
 
-4.12   December 12, 2011
+4.12   2011-12-12
 	- Add Test::PrereqsFromMeta
 	- Pass pod_finder param to PodLoom and TemplateCJM (as finder)
 	- Pass template_file param to TemplateCJM (as file)
 	- The @CJM bundle has been removed.  You should replace [@CJM]
 	  with [@Author::CJM / CJM] in your dist.ini
 
-4.11   November 11, 2011
+4.11   2011-11-11
 	- Add CheckPrereqsIndexed
 	- Pass check_recommend param to RecommendedPrereqs
 	- Add remove_plugin param (Can't pass multivalue params to @Filter)
 	- Improve documentation
 
-4.10   November 1, 2011
+4.10   2011-11-01
 	- Rename bundle from @CJM to @Author::CJM.  This dist still
 	  contains a @CJM bundle, but it just issues a deprecation
 	  warning and loads @Author::CJM.  It will be removed soon.
@@ -33,33 +33,33 @@ Revision history for Dist-Zilla-PluginBundle-Author-CJM
 	- Pass changelog_re param to TemplateCJM
 	- Require PodLoom version 4.01 (latest version)
 
-4.02   May 5, 2011
+4.02   2011-05-05
 	- Specify master branch in push_to, so it can push to a new repository
 	- Require PodLoom version 4.00 (compatible with current dzil).
 	- Require TemplateCJM version 3.05 (latest version)
 
-4.01   December 20, 2010
+4.01   2010-12-20
 	- Use %t to indicate a trial release
 	- Require @Git version 1.103520 (supports %t in Tag & Commit)
 	- Require TemplateCJM version 3.04 (latest version)
 
-4.00   December 7, 2010
+4.00   2010-12-07
 	- Require PodLoom version 3.01 (prefer web URL for repository).
 	- Require MatchManifest version 4.00 (works on Windows).
 	- Require TemplateCJM version 3.03 (more selective processing).
 	- Change major version to 4, because Dist::Zilla 4 is required.
 
-0.10   November 11, 2010
+0.10   2010-11-11
 	- Require GitVersionCheckCJM version 3.02 and Git::Wrapper.
 	  Don't require Git.pm anymore.
 	- Require Repository version 0.16 so github_http is unnecessary.
 	- Require MatchManifest version 0.04 (latest version).
 
-0.09   November 5, 2010
+0.09   2010-11-05
 	- Add MetaJSON (while keeping MetaYAML for v1.4 support)
 	- Add github_http = 0 for Repository (Meta 2 has url & web)
 
-0.08   April 14, 2010
+0.08   2010-04-14
 	@CJM is now a working PluginBundle.
 	The plugins are now distributed separately from @CJM.
 
@@ -74,10 +74,10 @@ Revision history for Dist-Zilla-PluginBundle-Author-CJM
 	All other plugins and Role::ModuleInfo
 	  - distributed in Dist-Zilla-Plugins-CJM
 
-0.07   April 1, 2010
+0.07   2010-04-01
 	- added tests
 
-0.06   April 1, 2010
+0.06   2010-04-01
 	Dist::Zilla::Plugin::ArchiveRelease
 	  - add FilePruner for archive directory (Michael Schout)
 
@@ -85,11 +85,11 @@ Revision history for Dist-Zilla-PluginBundle-Author-CJM
 	Dist::Zilla::Plugin::TemplateCJM
 	  - are now FileFinderUsers
 
-0.05   March 30, 2010
+0.05   2010-03-30
 	- All plugins now have a SYNOPSIS
 	- Revised compile tests
 
-0.04   March 29, 2010
+0.04   2010-03-29
 	- Now requires Dist::Zilla 2
 	- Added compile tests
 
@@ -98,7 +98,7 @@ Revision history for Dist-Zilla-PluginBundle-Author-CJM
 	    (creating it if necessary) and this release hasn't already
 	    been archived
 
-0.03   March 15, 2010
+0.03   2010-03-15
 	- Includes a new version of Template_strict.patch that
 	  supports scalar references properly
 
@@ -115,7 +115,7 @@ Revision history for Dist-Zilla-PluginBundle-Author-CJM
 	  - Added a BeforeRelease check to ensure the release date is
 	    not just an uppercase word
 
-0.02   March 7, 2010
+0.02   2010-03-07
 	- Added POD tests
 	- Use the plugin's log method so the plugin name appears in the log
 
@@ -130,7 +130,7 @@ Revision history for Dist-Zilla-PluginBundle-Author-CJM
 	Dist::Zilla::Plugin::TemplateCJM
 	  - Also process comments that start at beginning of line
 
-0.01   October 11, 2009
+0.01   2009-10-11
 	- Initial release includes:
 	    Dist::Zilla::Plugin::PodLoom
 	    Dist::Zilla::Plugin::TemplateCJM
