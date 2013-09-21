@@ -17,7 +17,7 @@ package Dist::Zilla::PluginBundle::Author::CJM;
 # ABSTRACT: Build a distribution like CJM
 #---------------------------------------------------------------------
 
-our $VERSION = '4.20';
+our $VERSION = '4.30';
 # This file is part of {{$dist}} {{$dist_version}} ({{$date}})
 
 use Moose;
@@ -45,10 +45,10 @@ This is the plugin bundle that CJM uses. It is equivalent to:
   [Test::PrereqsFromMeta]
   [PodSyntaxTests]
   [PodCoverageTests]
-  [ExtraTests]
   [PodLoom]
   data = tools/loom.pl
   [MakeMaker]
+  [RunExtraTests]
   [MetaConfig]
   [MatchManifest]
   [RecommendedPrereqs]
@@ -151,7 +151,6 @@ sub configure
       Test::PrereqsFromMeta
       PodSyntaxTests
       PodCoverageTests
-      ExtraTests
     ),
     [PodLoom => {
       data => 'tools/loom.pl',
@@ -165,6 +164,7 @@ sub configure
       scalar $self->config_slice(qw( eumm_version mb_version mb_class ))
     ],
     qw(
+      RunExtraTests
       MetaConfig
       MatchManifest
     ),
