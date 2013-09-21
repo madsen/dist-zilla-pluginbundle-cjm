@@ -1,6 +1,6 @@
 Revision history for Dist-Zilla-PluginBundle-Author-CJM
 
-4.30   NOT
+4.30   2013-09-21
 	- Use RunExtraTests instead of ExtraTests.  Unfortunately,
 	  this means that the MANIFEST will change, and MatchManifest
 	  will complain about that.
