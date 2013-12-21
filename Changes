@@ -1,5 +1,8 @@
 Revision history for Dist-Zilla-PluginBundle-Author-CJM
 
+4.31   NOT
+	- Pass check_recommend_tests param to RecommendedPrereqs
+
 4.30   2013-09-21
 	- Use RunExtraTests instead of ExtraTests.  Unfortunately,
 	  this means that the MANIFEST will change, and MatchManifest

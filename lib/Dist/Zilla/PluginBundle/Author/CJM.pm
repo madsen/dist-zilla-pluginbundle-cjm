@@ -17,7 +17,7 @@ package Dist::Zilla::PluginBundle::Author::CJM;
 # ABSTRACT: Build a distribution like CJM
 #---------------------------------------------------------------------
 
-our $VERSION = '4.30';
+our $VERSION = '4.31';
 # This file is part of {{$dist}} {{$dist_version}} ({{$date}})
 
 use Moose;
@@ -86,6 +86,10 @@ Passed to GitVersionCheckCJM as its C<finder>.
 =attr check_recommend
 
 Passed to RecommendedPrereqs as its C<finder>.
+
+=attr check_recommend_tests
+
+Passed to RecommendedPrereqs as its C<test_finder>.
 
 =attr eumm_version
 
@@ -169,7 +173,8 @@ sub configure
       MatchManifest
     ),
     [ RecommendedPrereqs => scalar $self->config_slice({
-        check_recommend => 'finder'
+        check_recommend => 'finder',
+        check_recommend_tests => 'test_finder',
     }) ],
     [ CheckPrereqsIndexed => scalar $self->config_slice({
         skip_index_check => 'skips'
@@ -211,7 +216,8 @@ sub configure
   }
 } # end configure
 
-sub mvp_multivalue_args { qw(check_files check_recommend remove_plugin
+sub mvp_multivalue_args { qw(check_files check_recommend check_recommend_tests
+                             remove_plugin
                              pod_finder skip_index_check template_file) }
 
 no Moose;
