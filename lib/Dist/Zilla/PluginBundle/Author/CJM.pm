@@ -17,11 +17,10 @@ package Dist::Zilla::PluginBundle::Author::CJM;
 # ABSTRACT: Build a distribution like CJM
 #---------------------------------------------------------------------
 
-our $VERSION = '4.31';
+our $VERSION = '4.32';
 # This file is part of {{$dist}} {{$dist_version}} ({{$date}})
 
 use Moose;
-use Moose::Autobox;
 with 'Dist::Zilla::Role::PluginBundle::Easy';
 
 =head1 SYNOPSIS
@@ -158,10 +157,10 @@ sub configure
     ),
     [PodLoom => {
       data => 'tools/loom.pl',
-      $self->config_slice({
+      %{ $self->config_slice({
         pod_finder   => 'finder',
         pod_template => 'template',
-      })->flatten,
+      }) },
     } ],
     # either MakeMaker or ModuleBuild:
     [ ($arg->{builder} || 'MakeMaker') =>
