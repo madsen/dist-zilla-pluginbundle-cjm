@@ -2,6 +2,12 @@ Revision history for Dist-Zilla-PluginBundle-Author-CJM
 
 4.32   NOT
 	- Don't use Moose::Autobox
+	- Require @Git version 2.027 (supports %c in Git::Tag)
+	- Require GitVersionCheckCJM version 4.26 (latest version)
+	- Require MatchManifest version 4.01 (safety check)
+	- Require PodLoom version 5.00 (Dzil 5 compatible)
+	- Require TemplateCJM version 4.22 (latest version)
+	- Require Test::PrereqsFromMeta 4.23 (latest version)
 
 4.31   2013-12-21
 	- Pass check_recommend_tests param to RecommendedPrereqs
