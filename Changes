@@ -1,6 +1,6 @@
 Revision history for Dist-Zilla-PluginBundle-Author-CJM
 
-4.33   NOT
+4.33   2015-02-07
 	- Remove Moose::Autobox from prerequisites
 	  (While 4.32 stopped using it, it was still erroneously
 	  listed as a prerequisite.)
