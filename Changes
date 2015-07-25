@@ -1,6 +1,6 @@
 Revision history for Dist-Zilla-PluginBundle-Author-CJM
 
-4.34   NOT
+4.34   2015-07-25
 	- Update prerequisites for better support of POD in scripts
 	- Require PodLoom version 5.001 (uses filename instead of 'main')
 	- Require TemplateCJM version 4.23 (adds $filename & $pathname)
