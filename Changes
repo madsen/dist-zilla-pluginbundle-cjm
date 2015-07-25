@@ -1,5 +1,10 @@
 Revision history for Dist-Zilla-PluginBundle-Author-CJM
 
+4.34   NOT
+	- Update prerequisites for better support of POD in scripts
+	- Require PodLoom version 5.001 (uses filename instead of 'main')
+	- Require TemplateCJM version 4.23 (adds $filename & $pathname)
+
 4.33   2015-02-07
 	- Remove Moose::Autobox from prerequisites
 	  (While 4.32 stopped using it, it was still erroneously
