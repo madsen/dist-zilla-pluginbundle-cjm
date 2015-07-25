@@ -1,7 +1,8 @@
-Dist-Zilla-PluginBundle-CJM version {{$version}}, released {{$date}}
+Dist-Zilla-PluginBundle-Author-CJM version {{$version}}, released {{$date}}
 
 
-Dist::Zilla::PluginBundle::CJM is the basic configuration I use when
+Dist::Zilla::PluginBundle::Author::CJM (which was previously called
+Dist::Zilla::PluginBundle::CJM) is the basic configuration I use when
 building CPAN modules with Dist::Zilla.  This distribution used to
 include a collection of plugins I've written, but those are now
 distributed separately (in Dist-Zilla-Plugins-CJM), so that you don't
@@ -28,7 +29,7 @@ DEPENDENCIES
 
 
 CHANGES
-    Here's what's new in version {{$version}} of Dist-Zilla-PluginBundle-CJM:
+    Here's what's new in version {{$version}} of Dist-Zilla-PluginBundle-Author-CJM:
     (See the file "Changes" for the full revision history.)
 
 {{$changes}}
