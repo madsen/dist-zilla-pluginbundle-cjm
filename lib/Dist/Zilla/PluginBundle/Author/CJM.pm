@@ -17,7 +17,7 @@ package Dist::Zilla::PluginBundle::Author::CJM;
 # ABSTRACT: Build a distribution like CJM
 #---------------------------------------------------------------------
 
-our $VERSION = '4.34';
+our $VERSION = '4.35';
 # This file is part of {{$dist}} {{$dist_version}} ({{$date}})
 
 use Moose;

@@ -1,5 +1,8 @@
 Revision history for Dist-Zilla-PluginBundle-Author-CJM
 
+4.35   NOT
+	- Add 10-build.t
+
 4.34   2015-07-25
 	- Update prerequisites for better support of POD in scripts
 	- Require PodLoom version 5.001 (uses filename instead of 'main')
