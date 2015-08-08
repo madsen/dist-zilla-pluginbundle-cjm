@@ -1,6 +1,7 @@
 Revision history for Dist-Zilla-PluginBundle-Author-CJM
 
-4.35   NOT
+4.35   2015-08-08
+	- No functional changes
 	- Add 10-build.t
 
 4.34   2015-07-25
