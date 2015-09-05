@@ -1,5 +1,9 @@
 Revision history for Dist-Zilla-PluginBundle-Author-CJM
 
+4.36   NOT
+	- Pass single_version param to GitVersionCheckCJM
+	- Require GitVersionCheckCJM version 4.27 (adds single_version)
+
 4.35   2015-08-08
 	- No functional changes
 	- Add 10-build.t

@@ -17,7 +17,7 @@ package Dist::Zilla::PluginBundle::Author::CJM;
 # ABSTRACT: Build a distribution like CJM
 #---------------------------------------------------------------------
 
-our $VERSION = '4.35';
+our $VERSION = '4.36';
 # This file is part of {{$dist}} {{$dist_version}} ({{$date}})
 
 use Moose;
@@ -120,6 +120,10 @@ The named plugin is removed from the bundle (may be specified multiple
 times).  This exists because you can't pass multi-value parameters
 through L<@Filter|Dist::Zilla::PluginBundle::Filter>.
 
+=attr single_version
+
+Passed to GitVersionCheckCJM.
+
 =attr skip_index_check
 
 Passed to CheckPrereqsIndexed as its C<skips>.
@@ -179,6 +183,7 @@ sub configure
         skip_index_check => 'skips'
     }) ],
     [ GitVersionCheckCJM => scalar $self->config_slice({
+        single_version => 'single_version',
         check_files => 'finder'
     }) ],
     [ TemplateCJM => {
