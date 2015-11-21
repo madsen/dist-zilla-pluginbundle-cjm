@@ -1,6 +1,7 @@
 Revision history for Dist-Zilla-PluginBundle-Author-CJM
 
-4.37   NOT
+4.37   2015-11-21
+	- No functional changes
 	- Make tests compatible with Dist::Zilla 5.040 and up
 
 4.36   2015-09-05
