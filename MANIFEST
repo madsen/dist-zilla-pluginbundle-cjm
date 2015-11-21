@@ -6,7 +6,6 @@ META.yml
 Makefile.PL
 README
 corpus/DZT/Changes
-corpus/DZT/MANIFEST
 corpus/DZT/MANIFEST.SKIP
 corpus/DZT/README
 corpus/DZT/README.md
@@ -18,5 +17,5 @@ lib/Dist/Zilla/PluginBundle/Author/CJM.pm
 t/00-all_prereqs.t
 t/00-compile.t
 t/10-build.t
-xt/release/pod-coverage.t
-xt/release/pod-syntax.t
+xt/author/pod-coverage.t
+xt/author/pod-syntax.t

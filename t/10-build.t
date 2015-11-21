@@ -36,8 +36,12 @@ delete $ENV{$_} for grep /^G(?:IT|PG)_/i, keys %ENV;
 $ENV{HOME} = $ENV{GNUPGHOME} = $homedir;
 $ENV{GIT_CONFIG_NOSYSTEM} = 1; # Don't read /etc/gitconfig
 
+# The POD tests moved from xt/release to xt/author in Dist::Zilla 5.040
+my $pod_test_dir = (Dist::Zilla->VERSION < 5.040) ? 'release' : 'author';
+
 my $zilla = Dist::Zilla::Tester->from_config({
   dist_root => path('corpus/DZT')->absolute,
+  }, {
   add_files => {
     'source/.gitignore' => <<'END GITIGNORE',
 /.build/
@@ -56,6 +60,20 @@ DZT-Sample-*/
 *.obj
 *.pdb
 END GITIGNORE
+    'source/MANIFEST' => <<"END MANIFEST",
+Changes
+LICENSE
+MANIFEST
+META.json
+META.yml
+Makefile.PL
+README
+lib/DZT/Sample.pm
+t/00-all_prereqs.t
+t/00-load.t
+xt/$pod_test_dir/pod-coverage.t
+xt/$pod_test_dir/pod-syntax.t
+END MANIFEST
   },
 });
 

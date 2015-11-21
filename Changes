@@ -1,5 +1,8 @@
 Revision history for Dist-Zilla-PluginBundle-Author-CJM
 
+4.37   NOT
+	- Make tests compatible with Dist::Zilla 5.040 and up
+
 4.36   2015-09-05
 	- Pass single_version param to GitVersionCheckCJM
 	- Require GitVersionCheckCJM version 4.27 (adds single_version)
